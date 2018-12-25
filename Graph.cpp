@@ -4,14 +4,15 @@
 
 #include "Graph.h"
 
-Graph::Graph(int v[], size_t l)
-    : values(v), length(l)
+// constuctor with member initializtion list (length)
+Graph::Graph(size_t l)
+    : length(l)
 {
     //
 }
 
-// return the largest value in the given array of integers
-int Graph::getLargest()
+// return the largest value in the given array of integers (values[])
+int Graph::getLargest(int values[])
 {
     int largest = 0;
 
@@ -28,9 +29,10 @@ int Graph::getLargest()
     return largest;
 }
 
-void Graph::display()
+// output the graph horizontally
+void Graph::display(int values[])
 {
-    int largest = getLargest(); // obtain largest value
+    int largest = getLargest(values); // obtain largest integer from the array of the values
 
     // predefine the only two characters used in generating the graph
     std::string asterisk = "*";

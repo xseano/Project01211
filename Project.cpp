@@ -32,8 +32,8 @@ int main()
 
     } while(counter <= MAX); // loop until a total of 100 values have been provided by the user
 
-    Graph graph(values, counter); // initialize the graph
-    graph.display(); // display results
+    Graph graph(counter); // initialize the graph
+    graph.display(values); // display results based on the values
 
     return 0;
 }

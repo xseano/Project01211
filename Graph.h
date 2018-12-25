@@ -1,3 +1,7 @@
+// Graph.h
+// oberoi, sean
+// ssoberoi
+
 #ifndef GRAPH_H
 #define GRAPH_H
 
@@ -6,12 +10,11 @@
 class Graph
 {
     public:
-        Graph(int v[], size_t l);
-        int getLargest();
-        void display();
+        Graph(size_t l); // set the length of the graph via constructor (public)
+        void display(int values[]); // used by the main function (public)
     private:
-        size_t length;
-        int values[];
+        size_t length; // value only ever set and used internally (private)
+        int getLargest(int values[]); // only ever used internally by Graph instance (private)
 };
 
 #endif
