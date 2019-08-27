@@ -12,7 +12,7 @@ Graph::Graph(size_t l)
 }
 
 // return the largest value in the given array of integers (values[])
-int Graph::getLargest(int values[])
+int Graph::find_largest(int values[])
 {
     int largest = 0;
 
@@ -29,31 +29,10 @@ int Graph::getLargest(int values[])
     return largest;
 }
 
-void Graph::compareRowColumn(std::string* line, std::string* space, std::string* asterisk, int row, int column, int width, int values[])
-{
-    row++;
-
-    if (row <= width)
-    {
-        compareRowColumn(line, space, asterisk, row, column, width, values);
-    }
-
-    if (column >= values[row]) // if the value of the row (o) is higher than the value of the column (j) then append a space
-    {
-        *line += *space;
-    }
-    else // otherwise add a star because its within the bounds of the current height (j)
-    {
-        *line += *asterisk;
-    }
-
-    std::cout << *line << std::endl; // output each horizontal line, one by one
-}
-
 // output the graph horizontally
 void Graph::display(int values[])
 {
-    int largest = getLargest(values); // obtain largest integer from the array of the values
+    int largest = find_largest(values); // obtain largest integer from the array of the values
 
     // predefine the only two characters used in generating the graph
     std::string asterisk = "*";
