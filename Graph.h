@@ -15,6 +15,7 @@ class Graph
     private:
         size_t length; // value only ever set and used internally (private)
         int getLargest(int values[]); // only ever used internally by Graph instance (private)
+        void compareRowColumn(std::string* line, std::string* space, std::string* asterisk, int row, int column, int width, int values[]); // used to compare column val against row val
 };
 
 #endif

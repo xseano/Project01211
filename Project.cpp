@@ -29,7 +29,7 @@ int main()
                 break; // the value is 0 so break the loop and continue
             }
         }
-
+        
     } while(counter <= MAX); // loop until a total of 100 values have been provided by the user
 
     Graph graph(counter); // initialize the graph
