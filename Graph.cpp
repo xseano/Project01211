@@ -4,7 +4,7 @@
 
 #include "Graph.h"
 
-// constuctor with member initializtion list (length)
+// constructor with member initialization list (length)
 Graph::Graph(size_t l)
     : length(l)
 {
@@ -26,6 +26,7 @@ int Graph::find_largest(int values[])
         }
     }
 
+    largest -= 1;
     return largest;
 }
 
